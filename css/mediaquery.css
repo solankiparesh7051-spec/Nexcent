@@ -464,7 +464,7 @@ width: 100%;
     }
      .cards-value{
         width: 100%;
-        height:55vh;
+        /* height:55vh; */
     }
       .section-frame16 {
         margin-top:5px;
@@ -652,8 +652,5 @@ width: 100%;
         width: 80%;
     }
     
-   
-}
-@media(max-width:360px){
    
 }

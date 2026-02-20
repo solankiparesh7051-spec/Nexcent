@@ -67,24 +67,27 @@ $(document).ready(function(){
 $(document).ready(function(){
       $('.clients-logos').slick({
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         arrows:false,
         dots: false,
-        speed: 300,
+        speed: 500,
         infinite: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 1500,
         autoplay: true,
         responsive: [
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 2,
+         
         }
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
+            slidesToScroll: 1,
         }
       }
     ]
