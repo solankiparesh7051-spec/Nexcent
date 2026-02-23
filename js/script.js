@@ -118,9 +118,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         infinite: false,
         responsive:[{
-                
+                breakpoint: 700,
                 settings:{
-                     breakpoint:700,
                     slidesToShow:1,
                     slidesToScroll:1,
                 }
@@ -145,7 +144,7 @@ if(registerForm) {
             setTimeout(function() {
                 alert("Registration Successful! Welcome, " + name);
                 window.location.href = "index.html";
-            }, 500);
+            },500);
         }
     });
 }
