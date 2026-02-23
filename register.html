@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcent - Register</title>
+    <link rel="icon" href="images/webicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img src="images/Logo.png" alt="Logo"></a>
+                </div>
+                <div class="right">
+                    <div class="list">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="register.html" class="nav-register-btn">Register Now<span><img src="images/Rightwhite.png"
+                                    alt="right-arrow"></span></a>
+                    </div>
+                    <div class="menubar"><i class="fa-solid fa-bars"></i></div>
+                    <ul class="slide-bar">
+                        <li><i id="close-btn" class="fa-solid fa-xmark"></i></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li>
+                            <div class="">
+                                <a href="register.html" class="nav-register-btn">Register Now<span><img src="images/Rightwhite.png"
+                                            alt="right-arrow"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <div class="container">
+                <div class="register-wrapper" data-aos="fade-up">
+                    <div class="register-container">
+                        <h2>Create Account</h2>
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="********" required>
+                            </div>
+                            <button type="submit" class="register-submit-btn">Sign Up</button>
+                        </form>
+                        <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #717171;">
+                            Already have an account? <a href="#" style="color: #4CAF4F;">Login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="company-info">
+                    <div class="company-logo">
+                        <img src="images/footer-logo.png" alt="">
+                    </div>
+                    <div class="Copyright">
+                        <p>Copyright © 2020 Nexcent ltd.</p>
+                        <p>All rights reserved</p>
+                    </div>
+                    <div class="socialmedia-icon">
+                        <a href="#" target="_blank">
+                            <img src="images/social1.png" alt="">
+                            <img src="images/social2.png" alt="">
+                            <img src="images/social3.png" alt="">
+                            <img src="images/social4.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <div class="col1">
+                        <p>Company</p>
+                        <div class="li">
+                            <a href="#">About us</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Testimonials</a>
+                        </div>
+                    </div>
+                    <div class="col1">
+                        <p>Support</p>
+                        <div class="li">
+                            <a href="#">Helpcenter</a>
+                            <a href="#">Terms of service</a>
+                            <a href="#">Legal</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Status</a>
+                        </div>
+                    </div>
+                    <div class="col1">
+                        <p>Stay up to date</p>
+                        <div class="email">
+                            <input type="text" placeholder="Your email address">
+                            <img src="images/send.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

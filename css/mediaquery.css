@@ -219,7 +219,7 @@ width: 100%;
         display: none;
     }
 
-    .right .btn {
+    .nav-register-btn {
         display: none;
     }
 
@@ -653,4 +653,10 @@ width: 100%;
     }
     
    
+}
+
+@media (min-width: 941px) {
+    .slide-bar {
+        display: none !important;
+    }
 }

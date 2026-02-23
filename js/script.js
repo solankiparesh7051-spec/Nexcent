@@ -1,4 +1,6 @@
 
+AOS.init();
+
 let icon=document.querySelector(".menubar")
 let close=document.querySelector("#close-btn")
 
@@ -14,23 +16,38 @@ icon.addEventListener("click",function(){
   
 })
 
-let data = document.querySelectorAll(".count")
-let arr = Array.from(data)
+let countSection = document.querySelector(".section-achieve");
+let data = document.querySelectorAll(".count");
 
-arr.map((item) => {
-    let startcount = 0;
+let observer = new IntersectionObserver((entries, observer) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+        data.forEach((item) => {
+            let target = parseInt(item.dataset.number.replace(/,/g, ""));
+            let count = 0;
+            let speed = target / 10; 
 
-    let counter = () => {
-        startcount++
-        item.textContent = startcount;
-        if (startcount == item.dataset.number) {
-            clearInterval(stop)
-        }
+            let updateCount = () => {
+                count += speed;
+                if (count < target) {
+                    item.textContent = Math.floor(count).toLocaleString();
+                    requestAnimationFrame(updateCount);
+                } else {
+                    item.textContent = target.toLocaleString();
+                }
+            };
+            updateCount();
+        });
+        observer.unobserve(countSection);
     }
-    let stop = setInterval(() => {
-        counter()
-    }, 1)
-})
+}, {
+    root: null,
+    threshold: 0.2,
+});
+
+if(countSection) {
+    observer.observe(countSection);
+}
 
 
 $(document).ready(function(){
@@ -110,3 +127,25 @@ $(document).ready(function () {
         }]
     });
 });
+
+// Register Form Functionality
+let registerForm = document.getElementById("registerForm");
+if(registerForm) {
+    registerForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email") ? document.getElementById("email").value : "";
+        
+        if(name) {
+            let subject = "New Registration: " + name;
+            let body = "Name: " + name + "\nEmail: " + email;
+            
+            window.location.href = "mailto:solankiparesh7051@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            
+            setTimeout(function() {
+                alert("Registration Successful! Welcome, " + name);
+                window.location.href = "index.html";
+            }, 500);
+        }
+    });
+}
