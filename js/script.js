@@ -1,5 +1,19 @@
 
-AOS.init();
+AOS.init({
+    duration: 1000,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 50
+});
+
+// Initialize Lenis for smooth scrolling
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 let icon=document.querySelector(".menubar")
 let close=document.querySelector("#close-btn")
