@@ -30,6 +30,20 @@ icon.addEventListener("click",function(){
   
 })
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#' || !targetId) return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            e.preventDefault();
+            let menu = document.querySelector(".slide-bar");
+            if (menu) menu.style.display = 'none';
+            lenis.scrollTo(targetElement, { offset: -100 });
+        }
+    });
+})
+
 let countSection = document.querySelector(".section-achieve");
 let data = document.querySelectorAll(".count");
 
