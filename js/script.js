@@ -162,3 +162,8 @@ if(registerForm) {
         }
     });
 }
+
+// Refresh AOS after full page load to ensure positions are correct
+window.addEventListener('load', function() {
+    AOS.refresh();
+});
