@@ -53,7 +53,7 @@ let observer = new IntersectionObserver((entries, observer) => {
         data.forEach((item) => {
             let target = parseInt(item.dataset.number.replace(/,/g, ""));
             let count = 0;
-            let speed = target / 10; 
+            let speed = target / 100000; 
 
             let updateCount = () => {
                 count += speed;
